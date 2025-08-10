@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mini Social</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Mini Social</h1>
+      <div id="auth">
+        <button id="show-login">Login</button>
+        <button id="show-register">Register</button>
+        <button id="logout" style="display:none">Logout</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="auth-forms" class="card">
+        <div id="login-form" class="form hidden">
+          <h3>Login</h3>
+          <input id="login-identifier" placeholder="username or email">
+          <input id="login-password" placeholder="password" type="password">
+          <button id="do-login">Login</button>
+        </div>
+
+        <div id="register-form" class="form hidden">
+          <h3>Register</h3>
+          <input id="reg-username" placeholder="username">
+          <input id="reg-email" placeholder="email">
+          <input id="reg-password" placeholder="password" type="password">
+          <input id="reg-avatar" placeholder="avatar url (optional)">
+          <textarea id="reg-bio" placeholder="bio (optional)"></textarea>
+          <button id="do-register">Register</button>
+        </div>
+      </section>
+
+      <section id="create-post" class="card hidden">
+        <textarea id="post-content" placeholder="What's happening?"></textarea>
+        <button id="post-button">Post</button>
+      </section>
+
+      <section id="feed" class="card">
+        <h2>Feed</h2>
+        <div id="posts"></div>
+      </section>
+
+      <section id="profile" class="card hidden">
+        <h2>Profile</h2>
+        <div id="profile-body"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
